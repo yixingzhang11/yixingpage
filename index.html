@@ -31,7 +31,8 @@
   .item .when { color:var(--muted); white-space:nowrap; }
   .entry { margin:14px 0; }
   .entry .sub { color:var(--muted); }
-  .pub { margin:10px 0; padding-left:2.6em; text-indent:-2.6em; }
+  .pub { display:list-item; list-style:disc outside; margin:10px 0 10px 20px; }
+  .thesis-title { font-size:1.5rem; font-weight:600; line-height:1.3; margin:4px 0 6px; }
   .tag { display:inline-block; width:2.6em; text-indent:0; color:var(--muted); }
   footer { margin-top:48px; color:var(--muted); font-size:.875rem; }
 </style>
@@ -43,7 +44,8 @@
   <div class="avatar"><img src="https://github.com/yixingzhang11.png?size=460" alt="Yixing Zhang"></div>
   <div>
   <h1>Yixing Zhang</h1>
-  <p class="role">Ph.D. Student in Computer Science · University of Gothenburg &amp; Chalmers University of Technology · Gothenburg, Sweden</p>
+  <p class="role">Ph.D. Student in Computer Science · University of Gothenburg &amp; Chalmers
+    University of Technology · Gothenburg, Sweden</p>
   <div class="links">
     <a href="mailto:yixing.zhang@gu.se">Email</a>
     <a href="https://www.chalmers.se/en/persons/yixing/">Research profile</a>
@@ -55,36 +57,84 @@
 
 <section>
   <h2>About</h2>
-  <p>I am a Ph.D. student in Computer Science and Engineering at the University of Gothenburg, supervised by
-  <a href="https://www.cse.chalmers.se/~duvignau/index.html#about">Prof. Romaric Duvignau</a> and Prof. Marina Papatriantafilou.
-  My research focuses on communication-efficient algorithms for continuously monitoring large-scale distributed systems,
-  as part of the <a href="https://research.chalmers.se/project/11445">READY</a> project (Rethinking Monitoring for Large Distributed Systems).</p>
+  <p>I am a Ph.D. student in Computer Science and Engineering at the University of Gothenburg,
+    supervised by
+  <a href="https://www.cse.chalmers.se/~duvignau/index.html#about">Prof. Romaric Duvignau</a> and
+    Prof. Marina Papatriantafilou.
+  My research focuses on communication-efficient algorithms for continuously monitoring large-scale
+    distributed systems,
+  as part of the <a href="https://research.chalmers.se/project/11445">READY</a> project (Rethinking
+    Monitoring for Large Distributed Systems).</p>
 </section>
 
 <section>
-  <h2>Publications</h2>
+  <h2>Licentiate Thesis (tentative)</h2>
+  <p class="thesis-title">Data-driven Continuous Monitoring in Large Distributed Systems</p>
+  <h3>Abstract</h3>
+  <p>Monitoring the state of individual nodes in large distributed systems is essential for data
+    analysis. However, frequently transmitting local state information to a central coordinator
+    incurs substantial communication overhead and energy costs. In resource-constrained settings,
+    these costs can degrade system performance. Continuous distributed monitoring addresses this 
+    challenge by enabling a central coordinator to track global statistics computed from local data
+     streams while reducing communication overhead. This thesis investigates how to reduce communication 
+     overhead in continuous distributed monitoring from both theoretical and practical perspectives.
+    </p></p>
+    This thesis proposes a framework FEDAMON. The experiments show that xxx.
+    </p></p>
+    In application wise, this thesis introduces a middleware Promemon that xxx. Evaluation verify
+    the communication reduction in both number of messages, packets and bytes. The deployment on RPis with wifi 
+    network, the same training time. 
+    </p></p>
+    Finally, this thesis introduces LT-MAX, a communication protocal to, and also the
+      therotical bounds. Experimental evaluation are conducted through both systentic and real-world
+      data.
+   </p>
+</section>
+
+<section>
+  <h2>Included Publications for the Licentiate</h2>
   <h3>Journal Articles</h3>
-  <p class="pub"><span class="tag">[J1]</span><b>Y. Zhang</b> and R. Duvignau. <a href="https://doi.org/10.1016/j.is.2026.102751">FEDAMON: A fully automated framework for communication-efficient continuous distributed monitoring with error guarantees</a>. <i>Information Systems</i> 141:102751, 2026.</p>
+  <p class="pub"><b>Y. Zhang</b> and R. Duvignau.
+    <a href="https://doi.org/10.1016/j.is.2026.102751">FEDAMON: A fully automated framework for
+    communication-efficient continuous distributed monitoring with error guarantees</a>.
+    <i>Information Systems</i> 141:102751, 2026.</p>
   <h3>Conference Papers</h3>
-  <p class="pub"><span class="tag">[C1]</span><b>Y. Zhang</b> and R. Duvignau. The Maximum Distributed Online Tracking Problem. In <i>Proc. 30th Conference on Principles of Distributed Systems (OPODIS)</i>, 2026.</p>
-  <p class="pub"><span class="tag">[C2]</span>A. Andersson, S. A. Naineni, M. Jansborg, <b>Y. Zhang</b> and R. Duvignau. Brief Announcement: Hybrid Monitoring for Early Fault Detection in Cloud-Native 5G Systems. In <i>Proc. 28th International Symposium on Stabilization, Safety, and Security of Distributed Systems (SSS)</i>, 2026. <a href="https://arxiv.org/abs/2609.12649">[Full version]</a></p>
-  <p class="pub"><span class="tag">[C3]</span><b>Y. Zhang</b> and R. Duvignau. <a href="https://doi.org/10.1145/3701717.3730544">FEDAMON: A forecast-based, error-bounded and data-aware approach to continuous distributed monitoring</a>. In <i>Proc. 19th ACM International Conference on Distributed and Event-based Systems (DEBS)</i>, pp. 39–50, 2025.</p>
+  <p class="pub"><b>Y. Zhang</b> and R. Duvignau. The Maximum Distributed Online Tracking Problem.
+    In <i>Proc. 30th Conference on Principles of Distributed Systems (OPODIS)</i>, 2026.</p>
   <h3>Under Review</h3>
-  <p class="pub"><span class="tag">[P1]</span><b>Y. Zhang</b>, E. Andreasson, A. Hallin, M. Forssén and R. Duvignau. Promemon: Getting more monitoring for less in Prometheus.</p>
+  <p class="pub"><b>Y. Zhang</b>, E. Andreasson, A. Hallin, M. Forssén and R. Duvignau. Promemon:
+    Getting more monitoring for less in Prometheus.</p>
+</section>
+
+<section>
+  <h2>Other Publications</h2>
+  <h3>Conference Papers</h3>
+  <p class="pub">A. Andersson, S. A. Naineni, M. Jansborg, <b>Y. Zhang</b> and R. Duvignau. Brief
+    Announcement: Hybrid Monitoring for Early Fault Detection in Cloud-Native 5G Systems. In
+    <i>Proc. 28th International Symposium on Stabilization, Safety, and Security of Distributed
+    Systems (SSS)</i>, 2026. <a href="https://arxiv.org/abs/2609.12649">[Full version]</a></p>
+  <p class="pub"><b>Y. Zhang</b> and R. Duvignau.
+    <a href="https://doi.org/10.1145/3701717.3730544">FEDAMON: A forecast-based, error-bounded and
+    data-aware approach to continuous distributed monitoring</a>. In <i>Proc. 19th ACM International
+    Conference on Distributed and Event-based Systems (DEBS)</i>, pp. 39–50, 2025.</p>
 </section>
 
 <section>
   <h2>Education</h2>
   <div class="entry">
-    <div class="item"><b>Ph.D. in Computer Science and Engineering</b><span class="when">Mar 2024 – Present</span></div>
+    <div class="item"><b>Ph.D. in Computer Science and Engineering</b><span class="when">Mar 2024 –
+      Present</span></div>
     <div class="sub">University of Gothenburg, Sweden</div>
   </div>
   <div class="entry">
-    <div class="item"><b>M.Sc. in Telecommunications</b><span class="when">Sep 2022 – Jun 2023</span></div>
-    <div class="sub">The Hong Kong University of Science and Technology (HKUST) · GPA 4.18/4.30</div>
+    <div class="item"><b>M.Sc. in Telecommunications</b><span class="when">Sep 2022 – Jun
+      2023</span></div>
+    <div class="sub">The Hong Kong University of Science and Technology (HKUST) · GPA
+      4.18/4.30</div>
   </div>
   <div class="entry">
-    <div class="item"><b>B.Eng. in Telecommunications Engineering</b><span class="when">Sep 2014 – Jun 2018</span></div>
+    <div class="item"><b>B.Eng. in Telecommunications Engineering</b><span class="when">Sep 2014 –
+      Jun 2018</span></div>
     <div class="sub">Huazhong University of Science and Technology (HUST), Wuhan, China</div>
   </div>
 </section>
@@ -92,7 +142,8 @@
 
 <section>
   <h2>Teaching</h2>
-  <p class="sub">Teaching Assistant, Chalmers University of Technology &amp; University of Gothenburg</p>
+  <p class="sub">Teaching Assistant, Chalmers University of Technology &amp; University of
+    Gothenburg</p>
   <ul>
     <li>Distributed Systems (M.Sc.) — Autumn 2026</li>
     <li>Computer Networks (M.Sc.) — Autumn 2024–2026</li>
